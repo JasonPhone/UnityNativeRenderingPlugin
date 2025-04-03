@@ -16,7 +16,7 @@
 // UNITY_WEBGL - WebGL
 // UNITY_EMBEDDED_LINUX - EmbeddedLinux OpenGLES
 // UNITY_EMBEDDED_LINUX_GL - EmbeddedLinux OpenGLCore
-#if _MSC_VER
+#ifdef WIN32
 	#define UNITY_WIN 1
 #elif defined(__APPLE__)
     #if TARGET_OS_TV
@@ -46,8 +46,6 @@
 		#define SUPPORT_D3D12 1
 	#endif
 #elif UNITY_WIN
-	//#define SUPPORT_D3D11 1 // comment this out if you don't have D3D11 header/library files
-	//#define SUPPORT_D3D12 0 // comment this out if you don't have D3D12 header/library files
 	#define SUPPORT_OPENGL_UNIFIED 0
 	#define SUPPORT_OPENGL_CORE 0
 	#define SUPPORT_VULKAN 1 // Requires Vulkan SDK to be installed
@@ -76,8 +74,6 @@
 #if UNITY_IOS || UNITY_TVOS || UNITY_OSX
 	#define SUPPORT_METAL 1
 #endif
-
-
 
 // COM-like Release macro
 #ifndef SAFE_RELEASE

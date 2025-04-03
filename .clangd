@@ -1,0 +1,5 @@
+CompileFlags:
+    Add: [
+        -I, "C:/Users/zs_fe/Documents/code/UnityNativeRenderingPlugin/PluginSource/source/include",
+        -I, "C:/VulkanSDK/1.4.304.1/Include",
+    ]
